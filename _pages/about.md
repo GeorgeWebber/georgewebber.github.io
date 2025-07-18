@@ -39,6 +39,10 @@ This website is intended to document my research journey and serve as a one-stop
 This website is still very much a work in progress!
 
 
+<!-- I am a PhD student at the EPSRC Smart Medical Imaging CDT. Based at King's College London, I research applications of AI to improving PET image reconstruction techniques, under the supervision of Prof. Andrew Reader. My goal is to develop novel and efficient methods that can enhance the quality and accuracy of PET images, and facilitate better diagnosis and treatment of diseases.
+
+Before joining KCL, I completed my master's degree in Mathematics and Computer Science at University of Oxford, with a First+Distinction. I studied topics such as geometric deep learning, computational biology, deep learning in healthcare, computational learning theory, and graph representation learning. I also gained valuable industry experience as an intern at Microsoft and Man Group, where I worked on projects focused on software engineering and researching new risk analytic measures respectively. -->
+
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

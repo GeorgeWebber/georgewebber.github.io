@@ -70,7 +70,7 @@
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- Dark Mode -->
-<script src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
+<script defer src="{{ '/assets/js/theme.js' | relative_url | bust_file_cache }}"></script>
 {% if site.enable_darkmode %}
   <link
     defer
@@ -80,7 +80,14 @@
     id="highlight_theme_dark"
   >
   <script>
+  window.addEventListener('DOMContentLoaded', () => {
+  if (typeof initTheme === 'function') {
+    console.log('Calling initTheme()');
     initTheme();
+  } else {
+    console.log('initTheme is not defined!');
+  }
+});
   </script>
 {% endif %}
 
