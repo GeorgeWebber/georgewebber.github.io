@@ -2,11 +2,12 @@
 layout: about
 title: bio
 permalink: /
-subtitle: etc...
+#subtitle: PhD Researcher 
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: headshot.jpg
+  loading: eager
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>5th Floor, Becket House</p>
@@ -22,16 +23,20 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm a second-year PhD researcher working on generative deep learning and medical image reconstruction. I currently work in Professor Andrew Reader's group at King's College London. Before my PhD, I studied Maths and Computer Science at St Anne's College, University of Oxford, graduating with a double first in my integrated Master's degree.
+Hi! I'm a second-year PhD researcher working on generative deep learning and medical image reconstruction. I currently work in Professor Andrew Reader's group at King's College London.
 
-My personal interests include tennis, running, ...
+Before my PhD, I studied Maths and Computer Science at St Anne's College, Oxford, graduating with a double first in my integrated Master's degree.
 
-This website is a work in progress!
+My personal interests include tennis, running, playing piano and saxophone.
+
+This website is intended to document my research journey and serve as a one-stop shop for people interested in my work.
+
+This website is still very much a work in progress!
 
 
 

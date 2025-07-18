@@ -1,9 +1,30 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"Conference Paper":
+  color: "#007f36"
+
+"Conference Abstract":
+  color: "#009f36"
+
+"Journal Paper":
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"Review Article":
+  color: "#e67e22"
 
-"Vision":
-  color: "#009f36"
+"IEEE TMI":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
+  color: "#00369f"
+
+"IEEE TRPMS":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7433213
+
+"NeurIPS":
+  url: https://neurips.cc/
+
+"MICCAI":
+  url: https://www.miccai.org/
+
+"IEEE MIC":
+  url: https://ieee-npss.org/nss-mic-conference-links/
+
+"BJR|AI":
+  url: https://academic.oup.com/bjrai
