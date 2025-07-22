@@ -1,33 +1,60 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: Graduation from the University of Oxford
+date: 2023-08-06 16:00:00-0000
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+I have now graduated from St Anne's College, University of Oxford with an Integrated Master's in Mathematics and Computer Science. I achieved a First Class across the first three years as well as a Distinction in the Master's year.
 
 ---
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
-
-#### Hipster list
-
+### Year averages
 <ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
+    <li>Year 2: 74%</li>
+    <li>Year 3: 76%</li>
+    <li>Year 4: 82%</li>
 </ul>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+### What I studied:
+
+#### Year 4
+<ul>
+    <li>Computational Biology</li>
+    <li>Computational Learning Theory</li>
+    <li>Deep Learning in Healthcare</li>
+    <li>Geometric Deep Learning</li>
+    <li>Graph Representation Learning</li>
+</ul>
+
+#### Year 3
+<ul>
+    <li>Artificial Intelligence</li>
+    <li>Computational Complexity</li>
+    <li>Computer Graphics</li>
+    <li>Continuous Martingales and Stochastic Calculus</li>
+    <li>Geometric Modelling</li>
+    <li>Information Theory</li>
+    <li>Logic and Proof</li>
+    <li>Machine Learning</li>
+    <li>Probability, Measure and Martingales</li>
+    <li>Quantum Information</li>
+</ul>
+
+#### Year 2
+<ul>
+    <li>Algorithms and Data Structures</li>
+    <li>Integration</li>
+    <li>Linear Algebra</li>
+    <li>Metric Spaces and Complex Analysis</li>
+    <li>Models of Computation</li>
+    <li>Probability</li>
+</ul>
+
+#### Year 1
+>
+
+Introductory mathematics and computer science modules including analysis, linear algebra, functional and iterative programming as well as probability.
 
 ---
-
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
-
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
-
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.

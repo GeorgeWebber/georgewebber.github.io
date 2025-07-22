@@ -32,12 +32,9 @@ Hi! I'm a second-year PhD researcher working on generative deep learning and med
 
 Before my PhD, I studied Maths and Computer Science at St Anne's College, Oxford, graduating with a double first in my integrated Master's degree.
 
-My personal interests include tennis, running, playing piano and saxophone.
+<!-- My personal interests include tennis, running, playing piano and saxophone. -->
 
 This website is intended to document my research journey and serve as a one-stop shop for people interested in my work.
-
-This website is still very much a work in progress!
-
 
 <!-- I am a PhD student at the EPSRC Smart Medical Imaging CDT. Based at King's College London, I research applications of AI to improving PET image reconstruction techniques, under the supervision of Prof. Andrew Reader. My goal is to develop novel and efficient methods that can enhance the quality and accuracy of PET images, and facilitate better diagnosis and treatment of diseases.
 

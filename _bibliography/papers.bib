@@ -11,9 +11,11 @@
   month        = aug,
   doi          = {10.1093/bjrai/ubae013},
   selected     = {true},
-  %abbr={BJR|AI},
   abbr         = {Review Article},
   selected_order = 2,
+  html = {https://academic.oup.com/bjrai/article/1/1/ubae013/7745314},
+  abstract = {Better algorithms for medical image reconstruction can improve image quality and enable reductions in acquisition time and radiation dose. A prior understanding of the distribution of plausible images is key to realising these benefits. Recently, research into deep-learning image reconstruction has started to look into using unsupervised diffusion models, trained only on high-quality medical images (ie, without needing paired scanner measurement data), for modelling this prior understanding. Image reconstruction algorithms incorporating unsupervised diffusion models have already attained state-of-the-art accuracy for reconstruction tasks ranging from highly accelerated MRI to ultra-sparse-view CT and low-dose PET. Key advantages of diffusion model approach over previous deep learning approaches for reconstruction include state-of-the-art image distribution modelling, improved robustness to domain shift, and principled quantification of reconstruction uncertainty. If hallucination concerns can be alleviated, their key advantages and impressive performance could mean these algorithms are better suited to clinical use than previous deep-learning approaches. In this review, we provide an accessible introduction to image reconstruction and diffusion models, outline guidance for using diffusion-model-based reconstruction methodology, summarise modality-specific challenges, and identify key research themes. We conclude with a discussion of the opportunities and challenges of using diffusion models for medical image reconstruction.},
+  tldr = {We summarize and explain how diffusion models can be used for medical image reconstruction, as well as reviewing the state-of-the-art.}
 }
 
 @inproceedings{webber2024generative_pet,
@@ -26,6 +28,9 @@
   doi          = {10.1109/NSS/MIC/RTSD57108.2024.10657861},
   %abbr         = {IEEE MIC},
   abbr         = {Conference Paper},
+  pdf = {pdf1.pdf},
+  tldr = {We adapt existing methodology for diffusion-model based image reconstruction to perform *real* *3D* PET image reconstruction, and show that they can outperform conventional methods in noisy settings.},
+  abstract = {Score-based generative models (SGMs) have recently shown promising results for image reconstruction on simulated positron emission tomography (PET) datasets. In this work we have developed and implemented practical methodology for 3D image reconstruction with SGMs, and perform (to our knowledge) the first SGM-based reconstruction of real fully 3D PET data. We train an SGM on full-count reference brain images, and extend methodology to allow SGM-based reconstructions at very low counts (1% of original, to simulate low-dose or short-duration scanning). We then perform reconstructions for multiple independent realisations of 1% count data, allowing us to analyse the bias and variance characteristics of the method.We sample from the learned posterior distribution of the generative algorithm to calculate uncertainty images for our reconstructions. We evaluate the method’s performance on real full- and lowcount PET data and compare with conventional OSEM and MAP-EM baselines, showing that our SGM-based low-count reconstructions match full-dose reconstructions more closely and in a bias-variance trade-off comparison, our SGM-reconstructed images have lower variance than existing baselines. Future work will compare to supervised deep-learned methods, with other avenues for investigation including how data conditioning affects the SGM’s posterior distribution.},
 }
 
 @inproceedings{webber2024multi_subject,
@@ -38,6 +43,8 @@
   doi          = {10.1109/NSS/MIC/RTSD57108.2024.10657861},
   %abbr         = {IEEE MIC},
   abbr         = {Conference Abstract},
+  pdf = {link to pdf here},
+  poster = {poster file here},
 }
 
 @article{webber2025likelihood_scheduled,
