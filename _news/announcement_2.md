@@ -53,8 +53,6 @@ I have now graduated from St Anne's College, University of Oxford with an Integr
 </ul>
 
 #### Year 1
->
-
-Introductory mathematics and computer science modules including analysis, linear algebra, functional and iterative programming as well as probability.
+<p>Introductory mathematics and computer science modules including analysis, linear algebra, functional and iterative programming as well as probability.</p>
 
 ---

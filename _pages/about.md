@@ -28,9 +28,9 @@ announcements:
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I'm a second-year PhD researcher working on generative deep learning and medical image reconstruction. I currently work in Professor Andrew Reader's group at King's College London.
+I am a second-year PhD researcher working on generative deep learning and medical image reconstruction. Currently, I study at King's College London, UK, where I am supervised by Prof. Andrew Reader.
 
-Before my PhD, I studied Maths and Computer Science at St Anne's College, Oxford, graduating with a double first in my integrated Master's degree.
+Before my PhD, I studied Mathematics and Computer Science at the University of Oxford, graduating with a double first in my Integrated Master's degree.
 
 <!-- My personal interests include tennis, running, playing piano and saxophone. -->
 

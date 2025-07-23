@@ -10,6 +10,9 @@
 "Review Article":
   color: "#e67e22"
 
+"Preprint":
+  color: "#{$grey-color}"
+
 "IEEE TMI":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
   color: "#00369f"

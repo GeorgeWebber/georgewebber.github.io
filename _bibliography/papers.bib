@@ -12,9 +12,10 @@
   doi          = {10.1093/bjrai/ubae013},
   selected     = {true},
   abbr         = {Review Article},
+  preview      = {bjrai_2024.png},
   selected_order = 2,
   html = {https://academic.oup.com/bjrai/article/1/1/ubae013/7745314},
-  abstract = {Better algorithms for medical image reconstruction can improve image quality and enable reductions in acquisition time and radiation dose. A prior understanding of the distribution of plausible images is key to realising these benefits. Recently, research into deep-learning image reconstruction has started to look into using unsupervised diffusion models, trained only on high-quality medical images (ie, without needing paired scanner measurement data), for modelling this prior understanding. Image reconstruction algorithms incorporating unsupervised diffusion models have already attained state-of-the-art accuracy for reconstruction tasks ranging from highly accelerated MRI to ultra-sparse-view CT and low-dose PET. Key advantages of diffusion model approach over previous deep learning approaches for reconstruction include state-of-the-art image distribution modelling, improved robustness to domain shift, and principled quantification of reconstruction uncertainty. If hallucination concerns can be alleviated, their key advantages and impressive performance could mean these algorithms are better suited to clinical use than previous deep-learning approaches. In this review, we provide an accessible introduction to image reconstruction and diffusion models, outline guidance for using diffusion-model-based reconstruction methodology, summarise modality-specific challenges, and identify key research themes. We conclude with a discussion of the opportunities and challenges of using diffusion models for medical image reconstruction.},
+  abstract = {Better algorithms for medical image reconstruction can improve image quality and enable reductions in acquisition time and radiation dose. A prior understanding of the distribution of plausible images is key to realising these benefits. Recently, research into deep-learning image reconstruction has started to look into using unsupervised diffusion models, trained only on high-quality medical images (i.e. without needing paired scanner measurement data), for modelling this prior understanding. Image reconstruction algorithms incorporating unsupervised diffusion models have already attained state-of-the-art accuracy for reconstruction tasks ranging from highly accelerated MRI to ultra-sparse-view CT and low-dose PET. Key advantages of diffusion model approach over previous deep learning approaches for reconstruction include state-of-the-art image distribution modelling, improved robustness to domain shift, and principled quantification of reconstruction uncertainty. If hallucination concerns can be alleviated, their key advantages and impressive performance could mean these algorithms are better suited to clinical use than previous deep-learning approaches. In this review, we provide an accessible introduction to image reconstruction and diffusion models, outline guidance for using diffusion-model-based reconstruction methodology, summarise modality-specific challenges, and identify key research themes. We conclude with a discussion of the opportunities and challenges of using diffusion models for medical image reconstruction.},
   tldr = {We summarize and explain how diffusion models can be used for medical image reconstruction, as well as reviewing the state-of-the-art.}
 }
 
@@ -27,10 +28,12 @@
   address      = {Tampa, FL, USA},
   doi          = {10.1109/NSS/MIC/RTSD57108.2024.10657861},
   %abbr         = {IEEE MIC},
-  abbr         = {Conference Paper},
-  pdf = {pdf1.pdf},
-  tldr = {We adapt existing methodology for diffusion-model based image reconstruction to perform *real* *3D* PET image reconstruction, and show that they can outperform conventional methods in noisy settings.},
-  abstract = {Score-based generative models (SGMs) have recently shown promising results for image reconstruction on simulated positron emission tomography (PET) datasets. In this work we have developed and implemented practical methodology for 3D image reconstruction with SGMs, and perform (to our knowledge) the first SGM-based reconstruction of real fully 3D PET data. We train an SGM on full-count reference brain images, and extend methodology to allow SGM-based reconstructions at very low counts (1% of original, to simulate low-dose or short-duration scanning). We then perform reconstructions for multiple independent realisations of 1% count data, allowing us to analyse the bias and variance characteristics of the method.We sample from the learned posterior distribution of the generative algorithm to calculate uncertainty images for our reconstructions. We evaluate the method’s performance on real full- and lowcount PET data and compare with conventional OSEM and MAP-EM baselines, showing that our SGM-based low-count reconstructions match full-dose reconstructions more closely and in a bias-variance trade-off comparison, our SGM-reconstructed images have lower variance than existing baselines. Future work will compare to supervised deep-learned methods, with other avenues for investigation including how data conditioning affects the SGM’s posterior distribution.},
+  abbr         = {Conference Abstract},
+  arxiv        = {2412.04319},
+  preview      = {mic_1_2024.png},
+  note = {Oral presentation},
+  tldr = {We perform the first <i>real 3D</i> PET image reconstruction with diffusion models, and show that this approach outperforms conventional methods in noisy settings.},
+  abstract = {Score-based generative models (SGMs) have recently shown promising results for image reconstruction on simulated positron emission tomography (PET) datasets. In this work we have developed and implemented practical methodology for 3D image reconstruction with SGMs, and perform (to our knowledge) the first SGM-based reconstruction of real fully 3D PET data. We train an SGM on full-count reference brain images, and extend methodology to allow SGM-based reconstructions at very low counts (1% of original, to simulate low-dose or short-duration scanning). We then perform reconstructions for multiple independent realisations of 1% count data, allowing us to analyse the bias and variance characteristics of the method. We sample from the learned posterior distribution of the generative algorithm to calculate uncertainty images for our reconstructions. We evaluate the method’s performance on real full- and lowcount PET data and compare with conventional OSEM and MAP-EM baselines, showing that our SGM-based low-count reconstructions match full-dose reconstructions more closely and in a bias-variance trade-off comparison, our SGM-reconstructed images have lower variance than existing baselines. Future work will compare to supervised deep-learned methods, with other avenues for investigation including how data conditioning affects the SGM’s posterior distribution.},
 }
 
 @inproceedings{webber2024multi_subject,
@@ -41,10 +44,14 @@
   month        = oct,
   address      = {Tampa, FL, USA},
   doi          = {10.1109/NSS/MIC/RTSD57108.2024.10657861},
-  %abbr         = {IEEE MIC},
+  %abbr        = {IEEE MIC},
   abbr         = {Conference Abstract},
-  pdf = {link to pdf here},
-  poster = {poster file here},
+  arxiv        = {2412.04324},
+  preview      = {mic_2_2024.png},
+  poster = {Webber_poster_IEEE_MIC_2024.pdf},
+  note = {Poster presentation},
+  tldr = {We synthesize subject-specific PET images from multi-subject data, and show that training a diffusion model on these images can be used to improve single-subject PET reconstruction.},
+  abstract = {Large high-quality medical image datasets are difficult to acquire but necessary for many deep learning applications. For positron emission tomography (PET), reconstructed image quality is limited by inherent Poisson noise. We propose a novel method for synthesising diverse and realistic pseudo-PET images with improved signal-to-noise ratio. We also show how our pseudo-PET images may be exploited as a generative prior for single-subject PET image reconstruction. Firstly, we perform deep-learned deformable registration of multi-subject magnetic resonance (MR) images paired to multi-subject PET images. We then use the anatomically-learned deformation fields to transform multiple PET images to the same reference space, before averaging random subsets of the transformed multi-subject data to form a large number of varying pseudo-PET images. We observe that using MR information for registration imbues the resulting pseudo-PET images with improved anatomical detail compared to the originals. We consider applications to PET image reconstruction, by generating pseudo-PET images in the same space as the intended single-subject reconstruction and using them as training data for a diffusion model-based reconstruction method. We show visual improvement and reduced background noise in our 2D reconstructions as compared to OSEM, MAP-EM and an existing state-of-the-art diffusion model-based approach. Our method shows the potential for utilising highly subject-specific prior information within a generative reconstruction framework. Future work may compare the benefits of our approach to explicitly MR-guided reconstruction methodologies.}
 }
 
 @article{webber2025likelihood_scheduled,
@@ -56,7 +63,11 @@
   doi          = {10.1109/TMI.2025.3576483},
   selected     = {true},
   selected_order = 1,
-  abbr         = {Journal Paper}
+  arxiv        = {2412.04339},
+  abbr         = {Journal Paper},
+  preview      = {tmi_2025.png},
+  tldr         = {We propose specifying the desired image-data agreement in advance and derive a diffusion-based method to reconstruct high-quality medical images that meet this target likelihood.},
+  abstract     = {Medical image reconstruction with pretrained score-based generative models (SGMs) has advantages over other existing state-of-the-art deep-learned reconstruction methods, including improved resilience to different scanner setups and advanced image distribution modeling. SGM-based reconstruction has recently been applied to simulated positron emission tomography (PET) datasets, showing improved contrast recovery for out-of-distribution lesions relative to the state-of-the-art. However, existing methods for SGM-based reconstruction from PET data suffer from slow reconstruction, burdensome hyperparameter tuning and slice inconsistency effects (in 3D). In this work, we propose a practical methodology for fully 3D reconstruction that accelerates reconstruction and reduces the number of critical hyperparameters by matching the likelihood of an SGM's reverse diffusion process to a current iterate of the maximum-likelihood expectation maximization algorithm. Using the example of low-count reconstruction from simulated [<sup>18</sup>F]DPA-714 datasets, we show our methodology can match or improve on the NRMSE and SSIM of existing state-of-the-art SGM-based PET reconstruction while reducing reconstruction time and the need for hyperparameter tuning. We evaluate our methodology against state-of-the-art supervised and conventional reconstruction algorithms. Finally, we demonstrate a first-ever implementation of SGM-based reconstruction for real 3D PET data, specifically [<sup>18</sup>F]DPA-714 data, where we integrate perpendicular pre-trained SGMs to eliminate slice inconsistency issues.}
 }
 
 @inproceedings{webber2025supervised_diffusion,
@@ -66,12 +77,17 @@
   year         = {2025},
   month        = sep,
   address      = {Daejeon, South Korea},
-  note         = {to appear},
+  note         = {To appear},
+  arxiv        = {2506.24034},
   doi          = {10.48550/arXiv.2506.24034},
   selected     = {true},
   selected_order = 3,
-  %abbr         = {MICCAI},
+  %abbr        = {MICCAI},
+  %poster = {poster file here, eventually},
+  preview      = {miccai_2025.png},
   abbr         = {Conference Paper},
+  tldr         = {We investigate the use of different data sources (either raw data or images) for training a diffusion model for PET image reconstruction. We propose methodology for training using raw data, and show that this can outperform existing methods (at cost to model flexibility).},
+  abstract = {Diffusion models (DMs) have recently been introduced as a regularizing prior for PET image reconstruction, integrating DMs trained on high-quality PET images with unsupervised schemes that condition on measured data. While these approaches have potential generalization advantages due to their independence from the scanner geometry and the injected activity level, they forgo the opportunity to explicitly model the interaction between the DM prior and noisy measurement data, potentially limiting reconstruction accuracy. To address this, we propose a supervised DM-based algorithm for PET reconstruction. Our method enforces the non-negativity of PET's Poisson likelihood model and accommodates the wide intensity range of PET images. Through experiments on realistic brain PET phantoms, we demonstrate that our approach outperforms or matches state-of-the-art deep learning-based methods quantitatively across a range of dose levels. We further conduct ablation studies to demonstrate the benefits of the proposed components in our model, as well as its dependence on training data, parameter count, and number of diffusion steps. Additionally, we show that our approach enables more accurate posterior sampling than unsupervised DM-based methods, suggesting improved uncertainty estimation. Finally, we extend our methodology to a practical approach for fully 3D PET and present example results from real [<sup>18</sup>F]FDG brain PET data.},
 }
 
 @inproceedings{webber2025steerable_conditional_diffusion,
@@ -81,9 +97,11 @@
   year         = {2025},
   month        = nov,
   address      = {Tampa, FL, USA},
-  note         = {to appear},
-  %abbr         = {IEEE MIC},
+  note         = {To appear},
+  preview      = {mic_1_2025.png},
   abbr         = {Conference Abstract},
+  tldr         = {We adapt the steerable conditional diffusion (SCD) framework to PET image reconstruction, and show that this can suppress artefacts when the diffusion model is trained on perturbed images and tested on normal anatomy.},
+  abstract     = {Diffusion models have recently enabled state-of-the-art reconstruction of positron emission tomography (PET) images while requiring only image training data. However, domain shift remains a key concern for clinical adoption: priors trained on images from one anatomy, acquisition protocol or pathology may produce artefacts on out-of-distribution data. We propose integrating <i>steerable conditional diffusion</i> (SCD) with our previously-introduced <i>likelihood-scheduled diffusion</i> (PET-LiSch) framework to improve the alignment of the diffusion model's prior to the target subject. At reconstruction time, for each diffusion step, we use low-rank adaptation (LoRA) to align the diffusion model prior with the target domain on the fly. Experiments on realistic synthetic 2D brain phantoms demonstrate that our approach suppresses hallucinated artefacts under domain shift, i.e. when our diffusion model is trained on perturbed images and tested on normal anatomy, our approach suppresses the hallucinated structure, outperforming both OSEM and diffusion model baselines qualitatively and quantitatively. These results provide a proof-of-concept that steerable priors can mitigate domain shift in diffusion-based PET reconstruction and motivate future evaluation on real data.},
 }
 
 @article{webber2025personalized_mr_informed,
@@ -91,10 +109,14 @@
   title        = {Personalized MR-Informed Diffusion Models for 3D PET Image Reconstruction},
   journal      = {IEEE Transactions on Radiation and Plasma Medical Sciences},
   year         = {2025},
-  note         = {under review},
+  note         = {Under review},
+  arxiv        = {2506.03804},
   doi          = {10.48550/arXiv.2506.03804},
-  %abbr         = {IEEE TRPMS},
-  abbr         = {Journal Paper},
+  %abbr        = {Journal Paper},
+  abbr         = {Preprint},
+  preview      = {trpms_2025.png},
+  tldr         = {We synthesize subject-specific PET images from multi-subject data using MRI-based registration maps, and show that training a personalized diffusion model on these personalized images can improve resolve PET-MR mismatches for single-subject PET reconstruction.},
+  abstract     = {Recent work has shown improved lesion detectability and flexibility to reconstruction hyperparameters (e.g. scanner geometry or dose level) when PET images are reconstructed by leveraging pre-trained diffusion models. Such methods train a diffusion model (without sinogram data) on high-quality, but still noisy, PET images. In this work, we propose a simple method for generating subject-specific PET images from a dataset of multi-subject PET-MR scans, synthesizing ``pseudo-PET" images by transforming between different patients' anatomy using image registration. The images we synthesize retain information from the subject's MR scan, leading to higher resolution and the retention of anatomical features compared to the original set of PET images. With simulated and real [<sup>18</sup>F]FDG datasets, we show that pre-training a personalized diffusion model with subject-specific ``pseudo-PET" images improves reconstruction accuracy with low-count data. In particular, the method shows promise in combining information from a guidance MR scan without overly imposing anatomical features, demonstrating an improved trade-off between reconstructing PET-unique image features versus features present in both PET and MR. We believe this approach for generating and utilizing synthetic data has further applications to medical imaging tasks, particularly because patient-specific PET images can be generated without resorting to generative deep learning or large training datasets.},
 }
 
 @inproceedings{webber2025distributional_consistency_loss,
@@ -103,7 +125,7 @@
   booktitle    = {The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS 2025)},
   year         = {2025},
   address      = {San Diego, CA},
-  note         = {under review},
-  %abbr         = {NeurIPS},
-  abbr         = {Conference Paper},
+  note         = {Under review},
+  %abbr        = {Conference Paper},
+  abbr         = {Preprint},
 }

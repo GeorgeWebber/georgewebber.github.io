@@ -284,6 +284,9 @@ scholar:
   group_by: year
   group_order: descending
 
+  custom_fields:
+    - selected_order
+
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
 enable_publication_badges:
@@ -313,6 +316,7 @@ filtered_bibtex_keywords:
     poster,
     preview,
     selected,
+    selected_order,
     slides,
     supp,
     tldr,

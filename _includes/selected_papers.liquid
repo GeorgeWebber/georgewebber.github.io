@@ -1,8 +1,11 @@
 <div class="publications">
-  {% bibliography --query @*[selected=true]* --sort_by selected_order,year,month --order ascending --group_by none %}
+  {% bibliography --query @*[selected=true]* --sort_by selected_order --order ascending%}
+  <script>
+    window.addEventListener('load', function() {
+      // Find all buttons with class "tldr btn btn-sm z-depth-0" and simulate a click
+      document.querySelectorAll('.tldr.btn.btn-sm.z-depth-0').forEach(function(btn) {
+        btn.click();
+      });
+    });
+  </script>
 </div>
-
-{% comment %} <div class="publications">
-  {% bibliography --group_by none --sort_by selected_order,year,month --query @*[selected=true]* %}
-</div>
- {% endcomment %}
