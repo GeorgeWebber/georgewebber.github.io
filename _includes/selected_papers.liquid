@@ -1,5 +1,5 @@
 <div class="publications">
-  {% bibliography --query @*[selected=true]* --sort_by selected_order --order ascending%}
+  {% bibliography --group_by none --query @*[selected=true]* --sort_by selected_order --order ascending%}
   <script>
     window.addEventListener('load', function() {
       // Find all buttons with class "tldr btn btn-sm z-depth-0" and simulate a click
