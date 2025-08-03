@@ -9,11 +9,11 @@ last_name: Webber
 contact_note: >
   (Email is the most reliable way to contact me.)
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A website to summarize my experience and interests.
+  A website to summarize my experience and research interests.
 footer_text: >
 keywords: george, webber, academic, machine learning, deep learning, inverse problems, PET, positron emission tomography
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://georgewebber.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root

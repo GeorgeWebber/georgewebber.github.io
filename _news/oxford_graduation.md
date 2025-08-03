@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Graduation from the University of Oxford
+title: Graduated from the University of Oxford
 date: 2023-08-06 16:00:00-0000
 inline: false
 related_posts: false
@@ -27,6 +27,8 @@ I have now graduated from St Anne's College, University of Oxford with an Integr
     <li>Geometric Deep Learning</li>
     <li>Graph Representation Learning</li>
 </ul>
+
+As part of my master's year, I undertook a dissertation on the security of wearable payment devices. Specifically, I worked with a biometric system that authenticated user's based on their gestures. Working with variational autoencoders, I developed a pipeline for generating synthetic user gestures that could be used to accelerate a user's enrolment into the authentication system.
 
 #### Year 3
 <ul>

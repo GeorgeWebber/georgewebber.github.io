@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="48" height="48" rx="6" fill="#000000" />
+
+  <!-- Head -->
+  <circle cx="24" cy="14" r="9" fill="#ffffff" />
+
+  <!-- Neck and Shoulders -->
+  <path d="
+    M15,26
+    Q24,34 33,26
+    Q36,26 39,38
+    Q24,48 9,38
+    Q12,26 15,26
+    Z" 
+    fill="#dddddd" />
+</svg>
