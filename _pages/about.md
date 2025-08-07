@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: headshot_v2.jpg
+  image: headshot_v2.JPG
   loading: eager
   image_circular: true # crops the image to make it circular
   more_info: >
