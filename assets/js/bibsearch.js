@@ -2,15 +2,27 @@ import { highlightSearchTerm } from "./highlight-search-term.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // actual bibsearch logic
+  // Replace your existing filterItems function with this corrected version.
   const filterItems = (searchTerm) => {
     document.querySelectorAll(".bibliography, .unloaded").forEach((element) => element.classList.remove("unloaded"));
 
     // highlight-search-term
     if (CSS.highlights) {
-      const nonMatchingElements = highlightSearchTerm({ search: searchTerm, selector: ".bibliography > li" });
+      let nonMatchingElements = highlightSearchTerm({ search: searchTerm, selector: ".bibliography > li" });
       if (nonMatchingElements == null) {
         return;
       }
+      // ---- START of MODIFICATION ----
+      // After finding elements that don't match the text, we do a second pass.
+      // We remove an element from the "non-matching" list if its internal bib key (ID) matches the search term.
+      nonMatchingElements = nonMatchingElements.filter((element) => {
+        // CORRECTLY find the div with an ID inside the <li> element
+        const idElement = element.querySelector("div[id]");
+        const bibKey = idElement ? idElement.id.toLowerCase() : "";
+        return !bibKey.includes(searchTerm);
+      });
+      // ---- END of MODIFICATION ----
+
       nonMatchingElements.forEach((element) => {
         element.classList.add("unloaded");
       });
@@ -18,32 +30,36 @@ document.addEventListener("DOMContentLoaded", function () {
       // Simply add unloaded class to all non-matching items if Browser does not support CSS highlights
       document.querySelectorAll(".bibliography > li").forEach((element, index) => {
         const text = element.innerText.toLowerCase();
-        if (text.indexOf(searchTerm) == -1) {
+        // ---- START of MODIFICATION ----
+        // CORRECTLY find the div with an ID inside the <li> element
+        const idElement = element.querySelector("div[id]");
+        const bibKey = idElement ? idElement.id.toLowerCase() : "";
+        // Hide the element only if the search term is NOT in the text AND NOT in the bib key.
+        if (text.indexOf(searchTerm) == -1 && bibKey.indexOf(searchTerm) == -1) {
           element.classList.add("unloaded");
         }
+        // ---- END of MODIFICATION ----
       });
     }
 
+    // This part of the function remains the same.
     document.querySelectorAll("h2.bibliography").forEach(function (element) {
-      let iterator = element.nextElementSibling; // get next sibling element after h2, which can be h3 or ol
+      let iterator = element.nextElementSibling;
       let hideFirstGroupingElement = true;
-      // iterate until next group element (h2), which is already selected by the querySelectorAll(-).forEach(-)
       while (iterator && iterator.tagName !== "H2") {
         if (iterator.tagName === "OL") {
           const ol = iterator;
           const unloadedSiblings = ol.querySelectorAll(":scope > li.unloaded");
           const totalSiblings = ol.querySelectorAll(":scope > li");
-
           if (unloadedSiblings.length === totalSiblings.length) {
-            ol.previousElementSibling.classList.add("unloaded"); // Add the '.unloaded' class to the previous grouping element (e.g. year)
-            ol.classList.add("unloaded"); // Add the '.unloaded' class to the OL itself
+            ol.previousElementSibling.classList.add("unloaded");
+            ol.classList.add("unloaded");
           } else {
-            hideFirstGroupingElement = false; // there is at least some visible entry, don't hide the first grouping element
+            hideFirstGroupingElement = false;
           }
         }
         iterator = iterator.nextElementSibling;
       }
-      // Add unloaded class to first grouping element (e.g. year) if no item left in this group
       if (hideFirstGroupingElement) {
         element.classList.add("unloaded");
       }

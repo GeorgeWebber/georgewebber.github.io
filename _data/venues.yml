@@ -1,17 +1,20 @@
-"Conference Paper":
-  color: "#007f36"
-
-"Conference Abstract":
-  color: "#009f36"
-
-"Journal Paper":
-  color: "#00369f"
-
-"Review Article":
-  color: "#e67e22"
-
-"Preprint":
-  color: "#{$grey-color}"
+{
+  "Journal Paper": {
+    "color": "#3852B8"
+  },
+  "Conference Paper": {
+    "color": "#299C6B"
+  },
+  "Conference Abstract": {
+    "color": "#A640BF"
+  },
+  "Review Article": {
+    "color": "#D95B29"
+  },
+  "Preprint": {
+    "color": "#757575"
+  }
+}
 
 "IEEE TMI":
   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42

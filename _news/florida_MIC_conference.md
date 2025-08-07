@@ -8,9 +8,9 @@ related_posts: false
 
 I presented two papers on the subject of solving the PET image reconstruction problem with diffusion models at the IEEE Nuclear Science Symposium Medical Imaging Conference (IEEE MIC).
 
-The [first paper](/publications/#Generative-Model-Based Fully 3-D PET Image Reconstruction by Conditional Diffusion Sampling), presented orally, showed the benefits of using diffusion models to help reconstruct real 3D PET data.
+The [first paper](/publications/#webber2024generative_pet), presented orally, showed the benefits of using diffusion models to help reconstruct real 3D PET data.
 
-The [second paper]({{ '/publications/' | relative_url }}?q=webber2024generative_pet), presented as a poster, demonstrated a proof-of-principle that registering training data to an anatomical space prior to training a diffusion model improves its performance on reconstruction tasks. 
+The [second paper](/publications/#webber2024multi_subject), presented as a poster, demonstrated a proof-of-principle that registering training data to an anatomical space prior to training a diffusion model improves its performance on reconstruction tasks. 
 
 
 ---
