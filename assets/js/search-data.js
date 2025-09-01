@@ -80,6 +80,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/MICCAI_paper_accepted_2025.html";
+            },},{id: "news-published-first-author-ieee-trpms-paper",
+          title: 'Published first-author IEEE TRPMS paper',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/trpms_2025_paper.html";
             },},{
         id: 'social-email',
         title: 'email',
