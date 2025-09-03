@@ -109,10 +109,9 @@
   title        = {Personalized MR-Informed Diffusion Models for 3D PET Image Reconstruction},
   journal      = {IEEE Transactions on Radiation and Plasma Medical Sciences},
   year         = {2025},
-  note         = {Under review},
   arxiv        = {2506.03804},
-  doi          = {10.48550/arXiv.2506.03804},
-  abbr        = {Journal Paper},
+  doi          = {10.1109/TRPMS.2025.3602262},
+  abbr        =  {Journal Paper},
   preview      = {trpms_2025.png},
   tldr         = {We synthesize subject-specific PET images from multi-subject data using MRI-based registration maps, and show that training a personalized diffusion model on these personalized images can improve resolve PET-MR mismatches for single-subject PET reconstruction.},
   abstract     = {Recent work has shown improved lesion detectability and flexibility to reconstruction hyperparameters (e.g. scanner geometry or dose level) when PET images are reconstructed by leveraging pre-trained diffusion models. Such methods train a diffusion model (without sinogram data) on high-quality, but still noisy, PET images. In this work, we propose a simple method for generating subject-specific PET images from a dataset of multi-subject PET-MR scans, synthesizing ``pseudo-PET" images by transforming between different patients' anatomy using image registration. The images we synthesize retain information from the subject's MR scan, leading to higher resolution and the retention of anatomical features compared to the original set of PET images. With simulated and real [<sup>18</sup>F]FDG datasets, we show that pre-training a personalized diffusion model with subject-specific ``pseudo-PET" images improves reconstruction accuracy with low-count data. In particular, the method shows promise in combining information from a guidance MR scan without overly imposing anatomical features, demonstrating an improved trade-off between reconstructing PET-unique image features versus features present in both PET and MR. We believe this approach for generating and utilizing synthetic data has further applications to medical imaging tasks, particularly because patient-specific PET images can be generated without resorting to generative deep learning or large training datasets.},
@@ -128,4 +127,5 @@ inproceedings{webber2025distributional_consistency_loss,
   %abbr        = {Conference Paper},
   abbr         = {Preprint},
 }
+
 
