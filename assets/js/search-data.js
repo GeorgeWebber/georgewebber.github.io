@@ -36,9 +36,6 @@ ninja.data = [{
           section: "News",},{id: "news-achieved-a-a-a-a-a-in-my-a-levels-maths-further-maths-physics-cs-amp-amp-epq",
           title: 'Achieved A*A*A*A*A* in my A-Levels (Maths, Further Maths, Physics, CS &amp;amp;amp; EPQ).',
           description: "",
-          section: "News",},{id: "news-awarded-my-faculty-s-pgr-research-excellence-prize-non-clinical-for-outstanding-research-at-the-mid-stage-2nd-year-of-phd-study",
-          title: 'Awarded my faculty’s PGR Research Excellence Prize (non-clinical) for outstanding research at the...',
-          description: "",
           section: "News",},{id: "news-began-studying-mathematics-and-computer-science-at-st-anne-s-college-university-of-oxford",
           title: 'Began studying Mathematics and Computer Science at St Anne’s College, University of Oxford....',
           description: "",
@@ -88,7 +85,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/trpms_2025_paper.html";
-            },},{
+            },},{id: "news-awarded-my-faculty-s-pgr-research-excellence-prize-non-clinical-for-outstanding-research-at-the-mid-stage-2nd-year-of-phd-study",
+          title: 'Awarded my faculty’s PGR Research Excellence Prize (non-clinical) for outstanding research at the...',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
