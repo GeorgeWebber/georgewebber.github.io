@@ -52,8 +52,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/BJRAI_2024_published.html";
-            },},{id: "news-presented-two-papers-at-ieee-mic-2024-in-florida",
-          title: 'Presented two papers at IEEE MIC 2024 in Florida',
+            },},{id: "news-presented-two-papers-at-ieee-mic-in-florida",
+          title: 'Presented two papers at IEEE MIC in Florida',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/florida_MIC_conference.html";
