@@ -52,8 +52,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/BJRAI_2024_published.html";
-            },},{id: "news-presented-two-papers-at-ieee-mic-in-florida",
-          title: 'Presented two papers at IEEE MIC in Florida',
+            },},{id: "news-presented-two-papers-at-ieee-mic-2024-in-florida",
+          title: 'Presented two papers at IEEE MIC 2024 in Florida',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/florida_MIC_conference.html";
@@ -68,7 +68,7 @@ ninja.data = [{
           section: "News",handler: () => {
               window.location.href = "/news/IEEE_TMI_2025_published.html";
             },},{id: "news-ieee-mic-2025-submission-accepted-for-oral-presentation",
-          title: 'IEEE MIC 2025 submission accepted for oral presentation',
+          title: 'IEEE MIC 2025 submission accepted for oral presentation.',
           description: "",
           section: "News",},{id: "news-presented-at-maths4dl-conference",
           title: 'Presented at Maths4DL conference',
