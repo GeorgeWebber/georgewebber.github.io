@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 ---
 
-IEEE MIC 2025 submission accepted for oral presentation
+
+IEEE MIC 2025 submission accepted for oral presentation.

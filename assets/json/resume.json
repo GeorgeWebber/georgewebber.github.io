@@ -6,7 +6,7 @@
     "email": "george.w11@hotmail.co.uk",
     "phone": "+44 7741 457 121",
     "url": "",
-    "summary": "Second-year PhD student at King’s College London with a First-Class Master’s in Mathematics & Computer Science from the University of Oxford. Research focuses on integrating generative machine learning models with conventional PET and MR reconstruction techniques to enhance medical image quality.",
+    "summary": "Third-year PhD student at King’s College London with a First-Class Intergrated Master’s in Mathematics & Computer Science from the University of Oxford. Research focuses on developing algorithms fusing generative machine learning models with conventional PET and MR reconstruction techniques to enhance medical image quality.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -135,6 +135,13 @@
   "certificates": [],
   "publications": [
     {
+      "name": "Personalized MR-Informed Diffusion Models for 3D PET Image Reconstruction",
+      "publisher": "IEEE Transactions on Radiation and Plasma Medical Sciences",
+      "releaseDate": "2025-08-26",
+      "url": "https://doi.org/10.1109/TRPMS.2025.3602262",
+      "summary": "Authors: G. Webber et al."
+    },
+    {
       "name": "Likelihood-Scheduled Score-Based Generative Modeling for Fully 3-D PET Image Reconstruction",
       "publisher": "IEEE Transactions on Medical Imaging",
       "releaseDate": "2025-06-01",
@@ -171,24 +178,17 @@
     },
     {
       "name": "Steerable Conditional Diffusion for Domain Adaptation in PET Image Reconstruction",
-      "publisher": "IEEE MIC 2025 (under review)",
-      "releaseDate": "2025-05-01",
+      "publisher": "IEEE MIC 2025 (accepted)",
+      "releaseDate": "2025-11-01",
       "url": "",
-      "summary": "Authors: G. Webber et al. Submitted: May 2025"
+      "summary": "Authors: G. Webber et al. To appear: Nov 2025"
     },
     {
       "name": "Supervised Diffusion-Model-Based PET Image Reconstruction",
-      "publisher": "MICCAI 2025 (under review)",
-      "releaseDate": "2025-02-01",
+      "publisher": "MICCAI 2025 (accepted)",
+      "releaseDate": "2025-09-29",
       "url": "",
-      "summary": "Authors: G. Webber et al. Submitted: Feb 2025"
-    },
-    {
-      "name": "Personalized MR-Informed Diffusion Models for 3D PET Image Reconstruction",
-      "publisher": "IEEE Transactions on Radiation and Plasma Medical Sciences (under review)",
-      "releaseDate": "2025-02-01",
-      "url": "https://arxiv.org/abs/arXiv:2506.03804",
-      "summary": "Authors: G. Webber et al. Submitted: Feb 2025"
+      "summary": "Authors: G. Webber et al. To appear: Sept 2025"
     }
   ],
   "skills": [
