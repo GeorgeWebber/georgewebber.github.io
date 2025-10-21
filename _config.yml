@@ -146,6 +146,9 @@ collections:
     defaults:
       layout: post
     output: true
+  presentations:
+    output: true
+    permalink: /presentations/:slug/
   # projects:
   #   output: false
 
@@ -218,6 +221,12 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: presentations
+    values:
+      layout: page     # you can switch to 'presentation' later if you make a custom layout
+      toc: false
 
 sass:
   style: compressed

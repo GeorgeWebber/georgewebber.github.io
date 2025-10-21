@@ -7,7 +7,7 @@ related_posts: false
 ---
 🎉 Thrilled to share that our [new paper](/publications/#webber2025supervised_diffusion) has been accepted to MICCAI 2025!
 
-🧠🖼️ "Measurement-Conditioned Diffusion Models for PET Image Reconstruction" is now available on [arXiv](https://arxiv.org/abs/2506.24034).
+🧠🖼️ "Supervised Diffusion-Model-based PET Image Reconstruction" is now available on [arXiv](https://arxiv.org/abs/2506.24034).
 In my previous work, I’ve been exploring how pre-trained diffusion models (trained on images) can be used for PET image reconstruction. This work instead explores the benefits and limitations of training diffusion models on raw PET data directly.
 
 🚀 Key highlights:
