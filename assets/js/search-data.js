@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-presentations",
+          title: "presentations",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/presentations/";
+          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -88,7 +95,17 @@ ninja.data = [{
             },},{id: "news-awarded-my-faculty-s-pgr-research-excellence-prize-non-clinical-for-outstanding-research-at-the-mid-stage-2nd-year-of-phd-study",
           title: 'Awarded my faculty’s PGR Research Excellence Prize (non-clinical) for outstanding research at the...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "presentations-supervised-diffusion-model-based-pet-image-reconstruction-miccai-2025",
+          title: 'Supervised Diffusion-Model-based PET Image Reconstruction @ MICCAI 2025',
+          description: "",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/sept-2025-miccai/";
+            },},{id: "presentations-steerable-conditional-diffusion-for-domain-adaptation-in-pet-image-reconstruction-amp-redefining-the-data-fidelity-objective-for-pet-image-reconstruction",
+          title: 'Steerable Conditional Diffusion for Domain Adaptation in PET Image Reconstruction* &amp;amp; *Redefining the...',
+          description: "",
+          section: "Presentations",handler: () => {
+              window.location.href = "/presentations/nov-2025-mic/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
