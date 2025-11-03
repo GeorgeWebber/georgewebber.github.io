@@ -100,8 +100,8 @@ ninja.data = [{
           description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/sept-2025-miccai/";
-            },},{id: "presentations-steerable-conditional-diffusion-for-domain-adaptation-in-pet-image-reconstruction-amp-redefining-the-data-fidelity-objective-for-pet-image-reconstruction",
-          title: 'Steerable Conditional Diffusion for Domain Adaptation in PET Image Reconstruction* &amp;amp; *Redefining the...',
+            },},{id: "presentations-addressing-conflict-between-prior-and-data-fidelity-in-pet-image-reconstruction",
+          title: 'Addressing Conflict between Prior and Data Fidelity in PET Image Reconstruction',
           description: "",
           section: "Presentations",handler: () => {
               window.location.href = "/presentations/nov-2025-mic/";
