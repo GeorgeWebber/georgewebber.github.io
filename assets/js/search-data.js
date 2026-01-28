@@ -95,6 +95,14 @@ ninja.data = [{
             },},{id: "news-awarded-my-faculty-s-pgr-research-excellence-prize-non-clinical-for-outstanding-research-at-the-mid-stage-2nd-year-of-phd-study",
           title: 'Awarded my faculty’s PGR Research Excellence Prize (non-clinical) for outstanding research at the...',
           description: "",
+          section: "News",},{id: "news-presented-at-ieee-mic-2025-in-yokohama-japan",
+          title: 'Presented at IEEE MIC 2025 in Yokohama, Japan',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/japan_MIC_conference_presentation.html";
+            },},{id: "news-iclr-2026-submission-accepted",
+          title: 'ICLR 2026 submission accepted.',
+          description: "",
           section: "News",},{id: "presentations-supervised-diffusion-model-based-pet-image-reconstruction-miccai-2025",
           title: 'Supervised Diffusion-Model-based PET Image Reconstruction @ MICCAI 2025',
           description: "",
