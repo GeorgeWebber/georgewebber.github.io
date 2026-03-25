@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Won best presentation at departmental research symposium 
+title: Won best presentation at departmental research symposium
 date: 2025-04-02 16:00:00-0000
 inline: false
 related_posts: false
