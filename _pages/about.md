@@ -28,13 +28,11 @@ announcements:
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a third-year PhD researcher working on generative deep learning and medical image reconstruction. Currently, I study at King's College London, UK, where I am supervised by Prof. Andrew Reader.
+I am a third-year PhD researcher at King’s College London working on generative modelling for inverse problems, particularly medical image reconstruction. My work focuses on integrating learned generative priors with physical forward models, with an emphasis on controllable inference and principled data consistency.
 
-Before my PhD, I read Mathematics and Computer Science at the University of Oxford, graduating with a First-Class Integrated Master's degree.
+I am supervised by Prof. Andrew Reader. I previously studied Mathematics and Computer Science at the University of Oxford, graduating with a First-Class Integrated Master’s degree.
 
-<!-- My personal interests include tennis, running, playing piano and saxophone. -->
-
-This website is intended to document my research journey and serve as a one-stop shop for people interested in my work.
+This website collects my publications and ongoing work.
 
 <!-- I am a PhD student at the EPSRC Smart Medical Imaging CDT. Based at King's College London, I research applications of AI to improving PET image reconstruction techniques, under the supervision of Prof. Andrew Reader. My goal is to develop novel and efficient methods that can enhance the quality and accuracy of PET images, and facilitate better diagnosis and treatment of diseases.
 
