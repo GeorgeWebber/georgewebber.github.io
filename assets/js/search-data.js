@@ -35,7 +35,7 @@ ninja.data = [{
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/cv/";
+            window.location.href = "/assets/pdf/CV.pdf";
           },
         },{id: "news-scored-in-the-top-50-students-uk-wide-for-a-level-computer-science",
           title: 'Scored in the Top 50 students UK-wide for A-Level Computer Science.',
