@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-ICLR 2026 submission was accepted, entitled "Distributional Consistency Loss: Beyond Pointwise Data Terms in Inverse Problems".
+ICLR 2026 submission accepted.

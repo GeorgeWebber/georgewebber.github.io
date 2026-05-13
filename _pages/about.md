@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 10 # leave blank to include all the news in the `_news` folder
 
 # latest_posts:
 #   enabled: false
@@ -28,11 +28,11 @@ announcements:
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a third-year PhD researcher at King’s College London working on generative modelling for inverse problems, particularly medical image reconstruction. My work focuses on integrating learned generative priors with physical forward models, with an emphasis on controllable inference and principled data consistency.
+I am a third-year PhD researcher at King’s College London, supervised by Prof. Andrew Reader, working on generative modelling for inverse problems in medical imaging. My research develops reconstruction methods that use generative models to capture what realistic images look like, while enforcing consistency with the measured data and the imaging system.
 
-I am supervised by Prof. Andrew Reader. I previously studied Mathematics and Computer Science at the University of Oxford, graduating with a First-Class Integrated Master’s degree.
+My first-authored work has appeared at ICLR, ICML, MICCAI and IEEE TMI among others, spanning score-based reconstruction, supervised diffusion models, distributional data consistency, and guidance methods for generative flow models.
 
-This website collects my publications and ongoing work.
+Before my PhD, I studied Mathematics and Computer Science at the University of Oxford, graduating with a First-Class Integrated Master’s degree.
 
 <!-- I am a PhD student at the EPSRC Smart Medical Imaging CDT. Based at King's College London, I research applications of AI to improving PET image reconstruction techniques, under the supervision of Prof. Andrew Reader. My goal is to develop novel and efficient methods that can enhance the quality and accuracy of PET images, and facilitate better diagnosis and treatment of diseases.
 
