@@ -100,14 +100,14 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/japan_MIC_conference_presentation.html";
-            },},{id: "news-iclr-2026-submission-was-accepted-entitled-distributional-consistency-loss-beyond-pointwise-data-terms-in-inverse-problems",
-          title: 'ICLR 2026 submission was accepted, entitled “Distributional Consistency Loss: Beyond Pointwise Data Terms...',
+            },},{id: "news-iclr-2026-submission-accepted",
+          title: 'ICLR 2026 submission accepted.',
           description: "",
           section: "News",},{id: "news-awarded-best-oral-presentation-at-the-synerbi-symposium-on-ai-and-reconstruction-for-biomedical-imaging",
           title: 'Awarded “Best Oral Presentation” at the SyneRBI Symposium on AI and Reconstruction for...',
           description: "",
-          section: "News",},{id: "news-icml-2026-submission-accepted-entitled-solving-inverse-problems-with-flow-based-models-via-model-predictive-control",
-          title: 'ICML 2026 submission accepted, entitled “Solving Inverse Problems with Flow-based Models via Model...',
+          section: "News",},{id: "news-icml-2026-submission-accepted",
+          title: 'ICML 2026 submission accepted.',
           description: "",
           section: "News",},{id: "presentations-supervised-diffusion-model-based-pet-image-reconstruction-miccai-2025",
           title: 'Supervised Diffusion-Model-based PET Image Reconstruction @ MICCAI 2025',
