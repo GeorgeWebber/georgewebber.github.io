@@ -1,11 +1,4 @@
 <div class="publications">
-  {% bibliography %}
-  <script>
-    window.addEventListener('load', function() {
-      // Find all buttons with class "tldr btn btn-sm z-depth-0" and simulate a click
-      document.querySelectorAll('.tldr.btn.btn-sm.z-depth-0').forEach(function(btn) {
-        btn.click();
-      });
-    });
-  </script>
+  {% bibliography --query @*[selected=true]* --group_by none %}
 </div>
+<p><a href="{{ '/publications/' | relative_url }}">View all publications</a></p>

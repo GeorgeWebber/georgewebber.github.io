@@ -147,8 +147,7 @@ collections:
       layout: post
     output: true
   presentations:
-    output: true
-    permalink: /presentations/:slug/
+    output: false
   # projects:
   #   output: false
 
@@ -173,6 +172,17 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - bin/
+  - _scripts/build-site.cjs
+  - _scripts/dev-server.cjs
+  - _scripts/publication_manifest.rb
+  - _scripts/serve-built-site.cjs
+  - _scripts/test-site.cjs
+  - tests/
+  - .test-artifacts/
+  - playwright.config.cjs
+  - site.ps1
+  - site.cmd
+  - TESTING.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
@@ -295,6 +305,12 @@ scholar:
 
   custom_fields:
     - selected_order
+    - publication_type
+    - first_author
+    - cofirst_author
+    - equal_contribution
+    - cv_selected
+    - cv_order
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
@@ -307,6 +323,7 @@ enable_publication_badges:
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords:
   [
+    venue_display,
     abbr,
     abstract,
     additional_info,
@@ -324,6 +341,15 @@ filtered_bibtex_keywords:
     pdf,
     poster,
     preview,
+    preview_alt,
+    preview_credit,
+    preview_source,
+    publication_type,
+    first_author,
+    cofirst_author,
+    equal_contribution,
+    cv_selected,
+    cv_order,
     selected,
     selected_order,
     slides,

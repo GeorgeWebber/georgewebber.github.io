@@ -1,0 +1,29 @@
+name: Website regression tests
+
+on:
+  workflow_call:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build production site and run regression tests
+        run: docker compose --profile test run --build --rm tests
+      - name: Save test results and failure traces
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-regression-results
+          path: |
+            .test-artifacts/report/
+            .test-artifacts/test-results/
+            .test-artifacts/build.log
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 14

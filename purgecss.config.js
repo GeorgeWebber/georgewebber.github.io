@@ -1,6 +1,8 @@
+const buildDirectory = process.env.SITE_BUILD_DIR || "_site";
+
 module.exports = {
-  content: ["_site/**/*.html", "_site/**/*.js"],
-  css: ["_site/assets/css/*.css"],
-  output: "_site/assets/css/",
-  skippedContentGlobs: ["_site/assets/**/*.html"],
+  content: [`${buildDirectory}/**/*.html`, `${buildDirectory}/**/*.js`],
+  css: [`${buildDirectory}/assets/css/*.css`],
+  output: `${buildDirectory}/assets/css/`,
+  skippedContentGlobs: [`${buildDirectory}/assets/**/*.html`],
 };

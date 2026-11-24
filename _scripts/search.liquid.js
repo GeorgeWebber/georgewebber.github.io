@@ -99,7 +99,11 @@ ninja.data = [
           section: "{{ collection.label | capitalize }}",
           {%- unless item.inline -%}
             handler: () => {
+              {%- if collection.label == 'presentations' -%}
+              window.location.href = "{{ '/presentations/' | relative_url }}#{{ item.slug | slugify }}";
+              {%- else -%}
               window.location.href = "{{ item.url | relative_url }}";
+              {%- endif -%}
             },
           {%- endunless -%}
         },

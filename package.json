@@ -1,6 +1,20 @@
 {
+  "name": "george-webber-website",
+  "private": true,
+  "scripts": {
+    "dev": "node _scripts/dev-server.cjs",
+    "build": "node _scripts/build-site.cjs",
+    "test": "node _scripts/test-site.cjs",
+    "test:metadata": "bundle exec ruby tests/publication_metadata_test.rb",
+    "test:browser": "playwright test",
+    "test:report": "playwright show-report .test-artifacts/report",
+    "css:purge": "purgecss -c purgecss.config.js"
+  },
+  "engines": { "node": ">=22" },
   "devDependencies": {
+    "@playwright/test": "1.65.1",
     "@shopify/prettier-plugin-liquid": "1.4.0",
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "purgecss": "9.1.0"
   }
 }

@@ -1,6 +1,7 @@
 ---
 layout: about
 title: bio
+description: Generative modelling, inverse problems and probabilistic machine learning, with applications to medical image reconstruction.
 permalink: /
 #subtitle: PhD Researcher 
 
@@ -16,6 +17,7 @@ profile:
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
+teaching_service: true
 
 scholar:
   query: "@*[selected=true]*"
@@ -26,7 +28,7 @@ scholar:
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 10 # leave blank to include all the news in the `_news` folder
+  limit: 5 # the full news archive retains all announcements
 
 # latest_posts:
 #   enabled: false
@@ -34,11 +36,15 @@ announcements:
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a third-year PhD researcher at King’s College London, supervised by Prof. Andrew Reader, working on generative modelling for inverse problems in medical imaging. My research develops reconstruction methods that use generative models to capture what realistic images look like, while enforcing consistency with the measured data and the imaging system.
+I am a fourth-year PhD researcher at King’s College London, supervised by Prof. Andrew J. Reader and Prof. Andrew P. King. My research focuses on generative modelling, inverse problems and probabilistic machine learning, with applications to medical image reconstruction. I expect to submit my PhD in September 2027.
 
-My first-authored work has appeared at ICLR, ICML, MICCAI and IEEE TMI among others, spanning score-based reconstruction, supervised diffusion models, distributional data consistency, and guidance methods for generative flow models.
+I am particularly interested in developing methods for conditioning generative models on measurements, efficient conditional sampling, statistical data consistency, and understanding how learned priors and model mismatch affect inverse problem solutions.
+
+My first- and co-first-authored research has appeared at ICLR, ICML, MICCAI and IEEE Transactions on Medical Imaging.
 
 Before my PhD, I studied Mathematics and Computer Science at the University of Oxford, graduating with a First-Class Integrated Master’s degree.
+
+In 2025, I received my faculty’s PGR Research Excellence Prize. In March 2026, I received the Best Oral Presentation award at the Symposium on AI and Reconstruction for Biomedical Imaging (AIRBI).
 
 <!-- I am a PhD student at the EPSRC Smart Medical Imaging CDT. Based at King's College London, I research applications of AI to improving PET image reconstruction techniques, under the supervision of Prof. Andrew Reader. My goal is to develop novel and efficient methods that can enhance the quality and accuracy of PET images, and facilitate better diagnosis and treatment of diseases.
 

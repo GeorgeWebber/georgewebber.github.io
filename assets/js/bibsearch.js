@@ -1,86 +1,70 @@
 import { highlightSearchTerm } from "./highlight-search-term.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  // actual bibsearch logic
-  // Replace your existing filterItems function with this corrected version.
-  const filterItems = (searchTerm) => {
-    document.querySelectorAll(".bibliography, .unloaded").forEach((element) => element.classList.remove("unloaded"));
+document.addEventListener("DOMContentLoaded", () => {
+  const results = document.getElementById("publication-results");
+  if (!results) return;
 
-    // highlight-search-term
-    if (CSS.highlights) {
-      let nonMatchingElements = highlightSearchTerm({ search: searchTerm, selector: ".bibliography > li" });
-      if (nonMatchingElements == null) {
-        return;
-      }
-      // ---- START of MODIFICATION ----
-      // After finding elements that don't match the text, we do a second pass.
-      // We remove an element from the "non-matching" list if its internal bib key (ID) matches the search term.
-      nonMatchingElements = nonMatchingElements.filter((element) => {
-        // CORRECTLY find the div with an ID inside the <li> element
-        const idElement = element.querySelector("div[id]");
-        const bibKey = idElement ? idElement.id.toLowerCase() : "";
-        return !bibKey.includes(searchTerm);
-      });
-      // ---- END of MODIFICATION ----
+  const search = document.getElementById("bibsearch");
+  const type = document.getElementById("publication-type");
+  const firstAuthor = document.getElementById("publication-first-author");
+  const count = document.getElementById("publication-count");
+  const empty = document.getElementById("publication-empty");
+  const records = Array.from(results.querySelectorAll(".bibliography > li"), (item) => ({
+    item,
+    metadata: item.querySelector("[data-publication-type]"),
+    // Include collapsed abstracts and author lists in search results.
+    text: item.textContent.toLocaleLowerCase(),
+  }));
 
-      nonMatchingElements.forEach((element) => {
-        element.classList.add("unloaded");
-      });
-    } else {
-      // Simply add unloaded class to all non-matching items if Browser does not support CSS highlights
-      document.querySelectorAll(".bibliography > li").forEach((element, index) => {
-        const text = element.innerText.toLowerCase();
-        // ---- START of MODIFICATION ----
-        // CORRECTLY find the div with an ID inside the <li> element
-        const idElement = element.querySelector("div[id]");
-        const bibKey = idElement ? idElement.id.toLowerCase() : "";
-        // Hide the element only if the search term is NOT in the text AND NOT in the bib key.
-        if (text.indexOf(searchTerm) == -1 && bibKey.indexOf(searchTerm) == -1) {
-          element.classList.add("unloaded");
-        }
-        // ---- END of MODIFICATION ----
-      });
+  function filterItems() {
+    const term = search?.value.trim().toLocaleLowerCase() || "";
+    let visible = 0;
+    for (const { item, metadata, text } of records) {
+      const key = metadata?.querySelector("div[id]")?.id.toLocaleLowerCase() || "";
+      const matchesSearch = !term || text.includes(term) || key.includes(term);
+      const matchesType = !type || type.value === "all" || metadata?.dataset.publicationType === type.value;
+      const matchesAuthor = !firstAuthor?.checked || metadata?.dataset.firstAuthor === "true";
+      const matches = matchesSearch && matchesType && matchesAuthor;
+      item.hidden = !matches;
+      if (matches) visible += 1;
     }
 
-    // This part of the function remains the same.
-    document.querySelectorAll("h2.bibliography").forEach(function (element) {
-      let iterator = element.nextElementSibling;
-      let hideFirstGroupingElement = true;
-      while (iterator && iterator.tagName !== "H2") {
-        if (iterator.tagName === "OL") {
-          const ol = iterator;
-          const unloadedSiblings = ol.querySelectorAll(":scope > li.unloaded");
-          const totalSiblings = ol.querySelectorAll(":scope > li");
-          if (unloadedSiblings.length === totalSiblings.length) {
-            ol.previousElementSibling.classList.add("unloaded");
-            ol.classList.add("unloaded");
-          } else {
-            hideFirstGroupingElement = false;
-          }
-        }
-        iterator = iterator.nextElementSibling;
+    // Jekyll Scholar emits a year heading followed by an ordered list.
+    for (const list of results.querySelectorAll("ol.bibliography")) {
+      list.hidden = !Array.from(list.children).some((item) => !item.hidden);
+    }
+    for (const heading of results.querySelectorAll("h2.bibliography")) {
+      let sibling = heading.nextElementSibling;
+      let hasResults = false;
+      while (sibling && sibling.tagName !== "H2") {
+        if (sibling.matches("ol.bibliography") && !sibling.hidden) hasResults = true;
+        sibling = sibling.nextElementSibling;
       }
-      if (hideFirstGroupingElement) {
-        element.classList.add("unloaded");
-      }
-    });
-  };
+      heading.hidden = !hasResults;
+    }
 
-  const updateInputField = () => {
-    const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    document.getElementById("bibsearch").value = hashValue;
-    filterItems(hashValue);
-  };
+    if (count) count.textContent = `${visible} ${visible === 1 ? "publication" : "publications"}`;
+    if (empty) empty.hidden = visible !== 0;
+    if (window.CSS?.highlights) {
+      highlightSearchTerm({ search: term, selector: "#publication-results .bibliography > li:not([hidden])" });
+    }
+  }
 
-  // Sensitive search. Only start searching if there's been no input for 300 ms
-  let timeoutId;
-  document.getElementById("bibsearch").addEventListener("input", function () {
-    clearTimeout(timeoutId); // Clear the previous timeout
-    const searchTerm = this.value.toLowerCase();
-    timeoutId = setTimeout(filterItems(searchTerm), 300);
-  });
+  function readHash() {
+    let hash = window.location.hash.slice(1);
+    try {
+      hash = decodeURIComponent(hash);
+    } catch {
+      // Treat malformed URL escapes as literal search text.
+    }
+    if (search) search.value = hash;
+    filterItems();
+  }
 
-  window.addEventListener("hashchange", updateInputField); // Update the filter when the hash changes
-
-  updateInputField(); // Update filter when page loads
+  document.querySelector(".publication-filters")?.removeAttribute("hidden");
+  search?.addEventListener("input", filterItems);
+  type?.addEventListener("change", filterItems);
+  firstAuthor?.addEventListener("change", filterItems);
+  window.addEventListener("hashchange", readHash);
+  readHash();
 });

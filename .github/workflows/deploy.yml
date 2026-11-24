@@ -9,6 +9,15 @@ on:
       - "assets/**"
       - "_sass/**"
       - "_scripts/**"
+      - "_plugins/**"
+      - ".devcontainer/**"
+      - ".dockerignore"
+      - "tests/**"
+      - "**.cjs"
+      - "Dockerfile"
+      - "package*.json"
+      - "site.ps1"
+      - "site.cmd"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -38,6 +47,15 @@ on:
       - "assets/**"
       - "_sass/**"
       - "_scripts/**"
+      - "_plugins/**"
+      - ".devcontainer/**"
+      - ".dockerignore"
+      - "tests/**"
+      - "**.cjs"
+      - "Dockerfile"
+      - "package*.json"
+      - "site.ps1"
+      - "site.cmd"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -65,7 +83,13 @@ permissions:
   contents: write
 
 jobs:
+  regression:
+    uses: ./.github/workflows/regression.yml
+    permissions:
+      contents: read
+
   deploy:
+    needs: regression
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
@@ -76,6 +100,11 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.17.1"
+          cache: npm
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
@@ -96,8 +125,8 @@ jobs:
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          npm ci
+          npm run css:purge
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

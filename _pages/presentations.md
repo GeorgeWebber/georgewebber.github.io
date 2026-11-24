@@ -12,17 +12,21 @@ nav_order: 3
 {% for g in groups %}
 ## {{ g.name }}
 {% for t in g.items %}
-### <a href="{{ t.url | relative_url }}">{{ t.title }}</a> <small>({{ t.date | date: "%b %Y" }})</small>
+<h3 id="{{ t.slug | slugify }}">{{ t.title }} <small>({% if t.date_precision == 'month' %}{{ t.date | date: "%b %Y" }}{% else %}{{ t.date | date: "%d %b %Y" }}{% endif %})</small></h3>
 
 **{{ t.type }}** · {{ t.venue }}{% if t.location %} — {{ t.location }}{% endif %}
 
-<ul>
-  {% if t.slides %}<li><a href="{{ t.slides | relative_url }}">Slides</a></li>{% endif %}
-  {% if t.poster %}<li><a href="{{ t.poster | relative_url }}">Poster</a></li>{% endif %}
-  {% if t.video %}<li><a href="{{ t.video }}">Video</a></li>{% endif %}
-  {% if t.paper %}<li><a href="{{ t.paper }}">Paper</a></li>{% endif %}
-  {% for L in t.links %}<li><a href="{{ L.url }}">{{ L.text }}</a></li>{% endfor %}
-</ul>
+{{ t.content | markdownify }}
+
+{% if t.slides or t.poster or t.video or t.paper or t.links %}
+<p class="presentation-links">
+  {% if t.slides %}<a href="{{ t.slides | relative_url }}">Slides</a> {% endif %}
+  {% if t.poster %}<a href="{{ t.poster | relative_url }}">Poster</a> {% endif %}
+  {% if t.video %}<a href="{{ t.video }}">Video</a> {% endif %}
+  {% if t.paper %}<a href="{{ t.paper }}">Paper</a> {% endif %}
+  {% for L in t.links %}<a href="{{ L.url }}">{{ L.text }}</a> {% endfor %}
+</p>
+{% endif %}
 
 <hr>
 {% endfor %}

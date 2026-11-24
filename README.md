@@ -1,3 +1,11 @@
+# George Webber's website
+
+Local preview: `site.cmd start` on Windows, then open <http://localhost:8080>.
+Regression tests: `site.cmd test`. Docker Desktop supplies all development dependencies.
+See [TESTING.md](TESTING.md) for the dev container, CI checks and debugging instructions.
+
+The theme documentation follows below.
+
 # al-folio
 
 <div align="center">

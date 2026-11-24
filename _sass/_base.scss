@@ -700,6 +700,66 @@ footer.sticky-bottom {
 
 // Publications
 
+.publication-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 1rem 1.5rem;
+  margin: 1rem 0 0.5rem;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+
+  .publication-type-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-width: 100%;
+  }
+
+  label { margin: 0; }
+
+  select {
+    max-width: 100%;
+    padding: 0.4rem 0.7rem;
+    font: inherit;
+    color: var(--global-text-color);
+    background-color: var(--global-bg-color);
+    border: 1px solid var(--global-text-color-light);
+    border-radius: 0.25rem;
+  }
+
+  .publication-authorship-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+  }
+
+  input {
+    flex-shrink: 0;
+    accent-color: var(--global-theme-color);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+}
+
+.publication-count {
+  color: var(--global-text-color-light);
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+// Keep filtered visibility consistent with Bootstrap display rules.
+.publication-filters[hidden],
+#publication-empty[hidden],
+#publication-results [hidden] {
+  display: none !important;
+}
+
 .publications {
   margin-top: 2rem;
 

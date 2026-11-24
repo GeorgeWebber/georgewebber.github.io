@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "George Webber",
-    "role": "PhD Researcher",
+    "role": "Fourth-year PhD researcher",
     "image": "assets/img/headshot_v2.JPG",
     "email": "george.w11@hotmail.co.uk",
     "phone": "+44 7741 457 121",
-    "url": "",
-    "summary": "Third-year PhD student at King’s College London with a First-Class Intergrated Master’s in Mathematics & Computer Science from the University of Oxford. Research focuses on developing algorithms fusing generative machine learning models with conventional PET and MR reconstruction techniques to enhance medical image quality.",
+    "url": "https://george-webber.com",
+    "summary": "Fourth-year PhD researcher at King’s College London developing computational methods for generative modelling, inverse problems and probabilistic machine learning, with applications to medical image reconstruction. Research interests include measurement conditioning, efficient conditional sampling, statistical data consistency, and the effects of learned priors and model mismatch. First-Class MMathCompSci from the University of Oxford. Expected PhD submission: September 2027.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -31,8 +31,7 @@
       "endDate": "",
       "summary": "",
       "highlights": [
-        "Deliver tutorials for undergraduate mathematics and labs for an interdisciplinary medical imaging module.",
-        "Mark coursework and provide detailed feedback to cohorts of 60+ students."
+        "Teach undergraduate mathematics and medical imaging through tutorials, laboratory supervision and assessment."
       ]
     },
     {
@@ -44,9 +43,7 @@
       "endDate": "2022-09-01",
       "summary": "",
       "highlights": [
-        "Designed experiments on simulated portfolios, enhancing Value-at-Risk calculations by incorporating earnings-announcement effects.",
-        "Co-authored an internal research paper and delivered a 30-minute presentation to senior risk managers.",
-        "Shipped production-ready Python code to calculate daily risk metrics."
+        "Developed and evaluated statistical risk models; co-authored an internal research paper and implemented the methods in production Python."
       ]
     },
     {
@@ -58,8 +55,7 @@
       "endDate": "2021-12-01",
       "summary": "",
       "highlights": [
-        "Open-sourced and extended Wise’s variational-autoencoder model for customer-behaviour prediction.",
-        "Authored tutorials and Jupyter notebooks demonstrating applications for fintech clients."
+        "Extended and open-sourced a variational autoencoder for customer-behaviour prediction."
       ]
     },
     {
@@ -71,19 +67,24 @@
       "endDate": "2021-08-01",
       "summary": "",
       "highlights": [
-        "Built and documented an automated monitoring solution for critical infrastructure.",
-        "Acted as technical lead among interns—wrote high-level design docs, test plans, and conducted code reviews."
+        "Built an automated monitoring system for critical infrastructure; led design and code reviews within the intern team."
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Smart Medical Imaging CDT",
-      "position": "Elected Student Representative",
-      "url": "",
-      "startDate": "2023-09-01",
-      "endDate": "",
-      "summary": "Organise research-development seminars and social events for the cohort.",
+      "organization": "IEEE NSS/MIC 2026",
+      "position": "Short-course co-instructor and oral-session co-chair",
+      "startDate": "2026-11",
+      "endDate": "2026-11",
+      "url": "https://nssmic.ieee.org/2026/program/",
+      "summary": "Co-instructor of Medical Image Reconstruction: from Foundations to AI with Andrew Reader and Siqi Li (10 November); co-chair of Advanced Tomographic Reconstruction Techniques (2) with Jinyi Qi (14 November).",
+      "highlights": []
+    },
+    {
+      "organization": "Academic peer review",
+      "position": "Peer reviewer",
+      "summary": "ICLR; Nature Communications; Medical Image Analysis; IEEE Transactions on Medical Imaging; IEEE Transactions on Computational Imaging; Pattern Recognition; and other journals.",
       "highlights": []
     }
   ],
@@ -95,12 +96,14 @@
       "area": "Biomedical Engineering & Imaging Sciences",
       "studyType": "PhD",
       "startDate": "2023-09-01",
-      "endDate": "",
+      "endDate": "2027-09",
       "score": "",
       "courses": [
+        "Expected PhD submission: September 2027.",
         "Project: Fully Bayesian 3D PET-MR Neuroimaging Reconstruction.",
-        "Investigating pre-trained diffusion models as generative priors for inverse problems in medical imaging.",
-        "Supervisors: Prof. Andrew J. Reader and Prof. Andrew P. King."
+        "Developing diffusion- and flow-based methods for inverse problems, including measurement conditioning, efficient sampling and optimisation-based guidance. Investigating statistical consistency and the effects of model mismatch and learned priors on reconstruction.",
+        "Supervisors: Prof. Andrew J. Reader and Prof. Andrew P. King.",
+        "Faculty-level PGR Research Excellence Prize 2025."
       ]
     },
     {
@@ -113,122 +116,55 @@
       "endDate": "2023-06-01",
       "score": "",
       "courses": [
-        "First Class overall (77 %) and Distinction in final year (81 %).",
-        "Master’s thesis: Improving the Security of Smartwatch Payment with Deep Learning."
-      ]
-    },
-    {
-      "institution": "John Mason School, Abingdon",
-      "location": "Abingdon, UK",
-      "url": "",
-      "area": "A-Levels and EPQ",
-      "studyType": "Secondary School",
-      "startDate": "2012-09-01",
-      "endDate": "2019-06-01",
-      "score": "",
-      "courses": [
-        "A*A*A*A*A* in Mathematics, Further Mathematics, Computer Science, Physics, and an EPQ."
+        "First Class overall (77%) and Distinction in final year (81%).",
+        "Master’s dissertation: Improving the Security of Smartwatch Payment with Deep Learning."
       ]
     }
   ],
-  "awards": [],
+  "awards": [
+    {
+      "title": "Best Oral Presentation",
+      "date": "2026-03",
+      "awarder": "Symposium on AI and Reconstruction for Biomedical Imaging (AIRBI)",
+      "summary": "A Non-Overfitting Objective for PET Image Reconstruction."
+    },
+    {
+      "title": "PGR Research Excellence Prize",
+      "date": "2025-10",
+      "awarder": "Faculty of Life Sciences & Medicine, King’s College London",
+      "summary": "Faculty-level prize for research at the mid-stage of PhD study."
+    }
+  ],
   "certificates": [],
-  "publications": [
-    {
-      "name": "Personalized MR-Informed Diffusion Models for 3D PET Image Reconstruction",
-      "publisher": "IEEE Transactions on Radiation and Plasma Medical Sciences",
-      "releaseDate": "2025-08-26",
-      "url": "https://doi.org/10.1109/TRPMS.2025.3602262",
-      "summary": "Authors: G. Webber et al."
-    },
-    {
-      "name": "Likelihood-Scheduled Score-Based Generative Modeling for Fully 3-D PET Image Reconstruction",
-      "publisher": "IEEE Transactions on Medical Imaging",
-      "releaseDate": "2025-06-01",
-      "url": "https://doi.org/10.1109/TMI.2025.3576483",
-      "summary": "Authors: G. Webber et al."
-    },
-    {
-      "name": "Diffusion Models for Medical Image Reconstruction",
-      "publisher": "BJR|Artificial Intelligence",
-      "releaseDate": "2024-09-01",
-      "url": "https://doi.org/10.1093/bjrai/ubae013",
-      "summary": "Authors: G. Webber & A. J. Reader"
-    },
-    {
-      "name": "Generative-Model-Based Fully 3-D PET Image Reconstruction by Conditional Diffusion Sampling",
-      "publisher": "IEEE Medical Imaging Conference (MIC) 2024, Tampa (oral)",
-      "releaseDate": "2024-11-01",
-      "url": "https://doi.org/10.1109/NSS/MIC/RTSD57108.2024.10657861",
-      "summary": "Authors: G. Webber et al."
-    },
-    {
-      "name": "Multi-Subject Image Synthesis as a Generative Prior for Single-Subject PET Reconstruction",
-      "publisher": "IEEE MIC 2024, Tampa (poster)",
-      "releaseDate": "2024-11-01",
-      "url": "https://doi.org/10.1109/NSS/MIC/RTSD57108.2024.10657446",
-      "summary": "Authors: G. Webber et al."
-    },
-    {
-      "name": "Distributional Consistency Loss: Solving Noisy Inverse Problems Without Overfitting",
-      "publisher": "NeurIPS 2025 (under review)",
-      "releaseDate": "2025-05-01",
-      "url": "",
-      "summary": "Authors: G. Webber & A. J. Reader. Submitted: May 2025"
-    },
-    {
-      "name": "Steerable Conditional Diffusion for Domain Adaptation in PET Image Reconstruction",
-      "publisher": "IEEE MIC 2025 (accepted)",
-      "releaseDate": "2025-11-01",
-      "url": "",
-      "summary": "Authors: G. Webber et al. To appear: Nov 2025"
-    },
-    {
-      "name": "Supervised Diffusion-Model-Based PET Image Reconstruction",
-      "publisher": "MICCAI 2025 (accepted)",
-      "releaseDate": "2025-09-29",
-      "url": "",
-      "summary": "Authors: G. Webber et al. To appear: Sept 2025"
-    }
-  ],
   "skills": [
     {
-      "name": "Programming",
-      "level": "Proficient",
-      "icon": "",
-      "keywords": [
-        "Python",
-        "NumPy",
-        "Pandas",
-        "SciPy",
-        "PyTorch",
-        "TensorFlow",
-        "scikit-learn",
-        "Matplotlib",
-        "Napari",
-        "Java",
-        "C#",
-        "Scala",
-        "HTML",
-        "SQL",
-        "JavaScript",
-        "CSS",
-        "Haskell"
-      ]
-    },
-    {
-      "name": "Tools & Workflow",
+      "name": "Research",
       "level": "",
       "icon": "",
       "keywords": [
-        "Git / GitHub",
+        "Diffusion and score-based models",
+        "Flow matching",
+        "Conditional sampling",
+        "Inverse problems",
+        "Distributional consistency",
+        "Optimisation",
+        "Bayesian inference",
+        "Medical imaging"
+      ]
+    },
+    {
+      "name": "Computing",
+      "level": "",
+      "icon": "",
+      "keywords": [
+        "Python",
+        "PyTorch",
+        "NumPy",
+        "SciPy",
+        "CUDA",
+        "Scientific forward models",
         "Linux",
-        "Windows",
-        "Azure",
-        "GCS storage",
-        "Scrum / Agile",
-        "Confluence",
-        "Jira",
+        "Git",
         "LaTeX"
       ]
     }
@@ -236,5 +172,17 @@
   "languages": [],
   "interests": [],
   "references": [],
-  "projects": []
+  "projects": [
+    {
+      "name": "RICAM workshop on Generative AI",
+      "description": "Poster presentation of MPC-Flow in Linz, Austria.",
+      "startDate": "2026-10",
+      "endDate": "2026-10",
+      "url": "https://www.ricam.oeaw.ac.at/specsem/specsem2026/workshop1/",
+      "highlights": []
+    }
+  ],
+  "meta": {
+    "lastModified": "2026-11-23"
+  }
 }
