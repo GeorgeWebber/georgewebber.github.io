@@ -90,45 +90,24 @@ jobs:
 
   deploy:
     needs: regression
+    if: github.event_name != 'pull_request'
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
-      - name: Setup Ruby 💎
-        uses: ruby/setup-ruby@v1
+      - name: Download tested production site
+        uses: actions/download-artifact@v5
         with:
-          ruby-version: "3.3"
-          bundler-cache: true
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22.17.1"
-          cache: npm
-      - name: Setup Python 🐍
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: "pip" # caching pip dependencies
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install and Build 🔧
+          name: tested-production-site
+          path: _site
+      - name: Verify deployment artifact
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
-          npm ci
-          npm run css:purge
-      - name: Deploy 🚀
-        if: github.event_name != 'pull_request'
+          test -s _site/index.html
+          test -s _site/publications/index.html
+          test -s _site/assets/css/main.css
+          test "$(cat _site/CNAME)" = "george-webber.com"
+      - name: Deploy tested site 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site

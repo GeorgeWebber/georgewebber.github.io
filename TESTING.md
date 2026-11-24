@@ -19,7 +19,7 @@ Open <http://localhost:8080>. The command starts Docker Desktop if needed, build
 .\site.cmd stop
 ```
 
-`test` builds a separate production site, prunes CSS as deployment does, runs metadata tests and exercises the built pages in Chromium. A failure returns a nonzero exit code. Testing can run while the preview stays open. Dependencies and browser binaries are installed inside the image from the checked-in lockfiles; no Ruby, Node or browser installation is needed on Windows.
+`test` builds a separate production site, prunes production CSS, runs metadata tests and exercises the built pages in Chromium. A failure returns a nonzero exit code. Testing can run while the preview stays open. Dependencies and browser binaries are installed inside the image from the checked-in lockfiles; no Ruby, Node or browser installation is needed on Windows.
 
 ## VS Code dev container (optional)
 
@@ -35,7 +35,7 @@ docker compose --profile test run --build --rm tests
 docker compose stop site
 ```
 
-The deployment workflow requires this regression suite to pass before its deployment job runs. Pull requests build and test without publishing. The regression workflow can also be run manually from GitHub Actions. Nothing is published by the local commands.
+The deployment workflow requires this regression suite to pass before its deployment job runs. Once tests pass, regression uploads the exact production output from `.test-artifacts/site/` as the `tested-production-site` artifact, retained for three days. Deployment downloads that artifact into `_site/`, verifies the main pages, CSS and custom domain, then publishes it without rebuilding or reinstalling Ruby, Node or Python dependencies. Pull requests build and test without publishing. The regression workflow can also be run manually from GitHub Actions. Nothing is published by the local commands.
 
 ## What is checked
 

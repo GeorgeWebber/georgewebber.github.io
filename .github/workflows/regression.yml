@@ -15,6 +15,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build production site and run regression tests
         run: docker compose --profile test run --build --rm tests
+      - name: Save tested production site
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tested-production-site
+          path: .test-artifacts/site/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 3
       - name: Save test results and failure traces
         if: always()
         uses: actions/upload-artifact@v4
